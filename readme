@@ -1,8 +1,0 @@
-# Create venv   
-python -m venv venv
-
-# Activate venv PowerShell
-venv\Scripts\Activate.ps1
-
-# Activate venv CMD
-venv\Scripts\activate.bat
