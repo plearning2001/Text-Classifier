@@ -1,14 +1,27 @@
 import streamlit as st
 import pickle
 import nltk
-import string
 
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from utils.text_transformation import transform_text
 
-# download only once (safe to keep)
-nltk.download("punkt")
+def download_nltk_resources():
+    import nltk
+
+    resources = [
+        ("tokenizers/punkt", "punkt"),
+        ("tokenizers/punkt_tab", "punkt_tab"),
+        ("corpora/stopwords", "stopwords")
+    ]
+
+    for path, name in resources:
+        try:
+            nltk.data.find(path)
+        except LookupError:
+            nltk.download(name, quiet=True)
+
+download_nltk_resources()
 nltk.download("stopwords")
 
 ps = PorterStemmer()
