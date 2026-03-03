@@ -79,6 +79,6 @@ The application allows the user to:
 git clone <your-repository-url>
 cd Text-Classifier
 python -m venv venv
-venv\Scripts\Activate.ps1 / venv\Scripts\activate.bat
+venv\Scripts\Activate.ps1  venv\Scripts\activate.bat
 pip install -r requirements.txt
 streamlit run app.py
