@@ -1,7 +1,6 @@
 ## SMS classifier to general text classifier
 
 Steps:
-
 - Lowercasing
 - Tokenization
 - Removal of non-alphanumeric tokens
